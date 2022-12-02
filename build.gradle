@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('junit:junit:4.13.2')
+    testRuntimeOnly('org.junit.vintage:junit-vintage-engine:5.9.0')
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+    implementation 'net.serenity-bdd:serenity-core:2.0.82'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
+    implementation 'net.serenity-bdd:serenity-screenplay:2.0.82'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:2.0.82'
+    implementation 'org.seleniumhq.selenium:selenium-server:3.14.0'
+}
+
+test {
+    useJUnitPlatform()
+}
