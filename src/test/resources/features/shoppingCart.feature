@@ -13,7 +13,8 @@
   Esquema del escenario: Agregar artículos al carro de compras
       Dado que un nuevo cliente accede hasta la web de compras
       Cuando el agrega productos al carro
-      Entonces el ve los productos listados en el carro de compras
+        | <nombreProducto> | <cantidad> |
+    Entonces el ve los productos listados en el carro de compras
 
     Ejemplos:
       | nombreProducto | cantidad |
