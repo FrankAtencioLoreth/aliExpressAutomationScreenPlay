@@ -1,4 +1,4 @@
-package runners;
+package com.aliExpress.runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
   features = "src/test/resources/features/shoppingCart.feature",
-  glue = "src/test/java/stepDefinitions/ShoppingCartStepDefinitions.java",
-  tags = "",
+  glue = "com.aliExpress.stepDefinitions",
+  tags = {},
   snippets = SnippetType.CAMELCASE
 )
 public class ShoppingCartRunner {
