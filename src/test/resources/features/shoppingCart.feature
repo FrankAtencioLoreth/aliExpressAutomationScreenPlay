@@ -8,7 +8,7 @@
   @EscenarioSinDatos
   Escenario: Agregar articulos al carro de compras
     Dado que un nuevo cliente accede hasta la web de compras
-    Cuando el agrega un producto al carro
+    Cuando el agrega 3 unidades el producto Tapabocas N95 de Belleza y salud al carro
     Entonces el ve los productos listados en el carro de compras
 
   @EscenarioConDatos
