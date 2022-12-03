@@ -4,7 +4,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.questions.Visibility;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
 import static com.aliExpress.userInterfaces.HomePage.*;
@@ -28,6 +30,7 @@ public class SearchProduct implements Task {
         actor.attemptsTo(
                 Enter.theValue(this.description).into(SEARCH_INPUT).thenHit(Keys.TAB),
                 Click.on(SEARCH_BUTTON),
+                WaitUntil.the(SEARCH_LINK_PRODUCT, WebElementStateMatchers.isEnabled()).forNoMoreThan(60).seconds(),
                 Click.on(SEARCH_LINK_PRODUCT)
         );
         for(String winHandle : getDriver().getWindowHandles()){
