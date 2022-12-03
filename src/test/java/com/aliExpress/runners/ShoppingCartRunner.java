@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
   features = "src/test/resources/features/shoppingCart.feature",
   glue = "com.aliExpress.stepDefinitions",
-  tags = {"@EscenarioSinDatos"},
+  tags = {"@EscenarioConDatos"},
   snippets = SnippetType.CAMELCASE
 )
 public class ShoppingCartRunner {

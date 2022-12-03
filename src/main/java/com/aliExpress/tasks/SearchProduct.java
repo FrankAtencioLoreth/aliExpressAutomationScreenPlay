@@ -1,18 +1,11 @@
-/**
- *  Clase que se encarga de buscar un producto
- *  @author: Frank Camilo Atencio Loreth
- *  @Date: 02/Dic/2022
- * */
 package com.aliExpress.tasks;
 
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.questions.Visibility;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 
 import static com.aliExpress.userInterfaces.HomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;

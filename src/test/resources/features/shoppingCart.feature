@@ -15,9 +15,11 @@
   Esquema del escenario: Agregar articulos al carro de compras
       Dado que un nuevo cliente accede hasta la web de compras
       Cuando el agrega productos al carro
-        | <nombreProducto> | <cantidad> |
+        | <cantidad> | <nombreProducto> | <categoria> |
     Entonces el ve los productos listados en el carro de compras
 
     Ejemplos:
-      | nombreProducto | cantidad |
-      | Tapabocas N95  | 20       |
+      | cantidad | nombreProducto    | categoria       |
+      | 3        | Tapabocas N95     | Belleza y salud |
+      | 2        | Gel de manos      | Belleza y salud |
+      | 5        | iphone 12 pro max | Belleza y salud |

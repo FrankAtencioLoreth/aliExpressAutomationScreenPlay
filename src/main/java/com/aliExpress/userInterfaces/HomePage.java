@@ -11,5 +11,5 @@ public class HomePage extends PageObject {
     public static final Target SEARCH_SELECT = Target.the("search select").located(By.xpath("//SELECT[@id='search-dropdown-box']"));
     public static final Target SEARCH_BUTTON = Target.the("search button").located(By.className("search-button"));
     public static final Target SUBSCRIPTION_BUTTON = Target.the("suscription button").located(By.xpath("//div[text()=\"No permitir\"]"));
-    public static final Target SEARCH_LINK_PRODUCT = Target.the("Search link").located(By.xpath("(//a/descendant::h1[contains(text(),\"Mascarilla\")])[1]"));
+    public static final Target SEARCH_LINK_PRODUCT = Target.the("Search link").located(By.xpath("//*[@class=\"top-container\"]/following-sibling::div[1]/a[1]"));
 }
