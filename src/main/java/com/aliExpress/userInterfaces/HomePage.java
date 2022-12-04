@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 
-@DefaultUrl("https://es.aliexpress.com")
+@DefaultUrl("page:webdriver.base.url")
 public class HomePage extends PageObject {
     public static final Target SEARCH_INPUT = Target.the("search input").located(By.id("search-key"));
     public static final Target SEARCH_SELECT = Target.the("search select").located(By.xpath("//SELECT[@id='search-dropdown-box']"));

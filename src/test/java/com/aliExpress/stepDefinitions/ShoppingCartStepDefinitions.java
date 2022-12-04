@@ -23,12 +23,10 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
 public class ShoppingCartStepDefinitions {
 
-
-    @Managed(driver = "chrome")
-    private WebDriver browser;
     private HomePage homePage = new HomePage();
 
     @Before
@@ -38,9 +36,8 @@ public class ShoppingCartStepDefinitions {
 
     @Dado("^que un nuevo cliente (.*) accede hasta la web de compras$")
     public void queUnNuevoClienteAccedeHastaLaWebDeCompras(String name) {
-        theActorCalled(name).can(BrowseTheWeb.with(this.browser));
-        theActorInTheSpotlight().wasAbleTo(Open.browserOn(homePage));
-        browser.manage().window().maximize();
+        theActorCalled(name).wasAbleTo(Open.browserOn(homePage));
+        getDriver().manage().window().maximize();
     }
 
     @Cuando("^el agrega (.*) unidades el producto (.*) de (.*) al carro$")
